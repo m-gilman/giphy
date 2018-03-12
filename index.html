@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GIF Finder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Itim|Pacifico" rel="stylesheet">
+</head>
+<body class="container">
+
+<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="https://m-gilman.github.io/">Melissa Gilman</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://m-gilman.github.io/index.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://m-gilman.github.io/portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://m-gilman.github.io/contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- MAIN CONTAINER... Everything except nav and header will be inside this container -->
+    <div class="pagewrap container">
+        <div class="row mt-5 pt-3">  
+        </div> <!-- The first row is hidden under the navbar -->
+<!--/END navigation -->        
+
+    <div class="row-md-2 text-center"> <!-- Title Row -->
+        <div class="col">
+            <h1>GIF Finder</h1>
+        </div> <!-- /End of col -->
+    </div> <!-- /End of title row -->
+
+    <div class="row mb-2"> <!-- Main Content -->
+        <div class="col-md-5">
+            <!-- New button creator  -->
+            <form id="button-form" class="form-inline bgTransparent text-center mb-1">
+            <!-- Label for Button -->    
+                <label for="gif-input">Add a GIF</label>
+                <input type="text" id="gif-input">
+            <!-- Submit Button adds new Gif -->
+                <input class="btn submit mb-1 mt-2" id="addGif" type="submit" value="submit">
+            </form>
+        </div> <!-- /End of col -->
+        
+        <div class="col-md-7">
+        <!-- Pre-determined & new buttons will display here -->
+        <div id="fixedButtons"> 
+                <button class="preButton">Example</button>
+                <button class="preButton">Example</button>
+                <button class="preButton">Example</button>
+                <button class="preButton">Example</button>
+                <button class="preButton">Example</button>
+                <button class="preButton">Example</button>
+                <button class="preButton">Example</button>
+                <button class="preButton">Example</button>
+                <button class="preButton">Example</button>
+                <button class="preButton">Example</button>
+                <button class="preButton">Example</button>
+                <button class="preButton">Example</button>
+            </div>
+    
+        </div> <!-- /End of col -->
+    </div> <!-- /End of row -->
+<div class="container text-center">
+    <div class="row my-1" id="gifsView"> <!-- gif section -->
+        <!-- new Gifs will Get Dumped Dere -->
+        <div class="col-md-3">
+            <img class="img-fluid theGif" src="https://picsum.photos/300/200?random">
+        </div>
+        <div class="col-md-3 gifBox">
+            <img class="img-fluid theGif" src="https://picsum.photos/300/200?random">
+        </div>
+        <div class="col-md-3 gifBox">
+            <img class="img-fluid theGif" src="https://picsum.photos/300/200?random">
+        </div>
+        <div class="col-md-3 gifBox">
+            <img class="img-fluid theGif" src="https://picsum.photos/300/200?random">
+        </div>
+        <div class="col-md-3 gifBox">
+            <img class="img-fluid theGif" src="https://picsum.photos/300/200?random">
+        </div>
+        <div class="col-md-3 gifBox">
+            <img class="img-fluid theGif" src="https://picsum.photos/300/200?random">
+        </div>
+    </div>
+</div>
+
+
+
+<!-- BEGIN footer -->
+    <footer class="bg-light p-2 fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm text-center">
+                </div>
+                <div class="col-sm text-center"> &copy; Copyright 2018 Melissa Gilman
+                </div>
+                <div class="col-sm text-center">
+                    <p class="credit text-right">Credit images: 
+                        <a href="https://www.freepik.com/free-photos-vectors/design" target="_blank">Design vector created by Freepik</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./assets/javascript/game.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

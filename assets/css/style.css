@@ -1,0 +1,95 @@
+/* * {
+    outline: 1px solid red !important;
+    } */
+
+
+/* Footer */
+.pagewrap {
+    min-height: 100%;
+    margin-bottom: -30px; 
+    }
+.pagewrap:after {
+    content: "";
+    display: block;
+    height: 30px;
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    font-size: 12px;    
+    color: darkslateblue;
+}
+
+footer .credit a{
+    color: slategray;
+} 
+
+/* BODY */
+
+body {
+    font-family: 'Itim', cursive;
+    font-size: 20px;
+    color: darkblue;
+    /* background: url(../images/abstract.jpg); */
+    background-size: auto; 
+    background-color: lightgray;
+}
+
+.funFacts, li {
+    font-size: 14px;
+}
+
+.bgTransparent {
+    background:rgba(0, 54, 80, 0.85);
+    color: white;
+    margin-bottom: 0px;
+    border: lightgray 1px solid;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+.preButton {
+    background: #055AE8;
+    color: white;
+    padding: 3px 12px;
+    font-size: 18px;
+    border-radius: 50px;
+    margin-bottom: 2px;
+}
+
+.preButton:hover {
+    background-color: #003650;
+}
+
+.preButton:active,.preButton:focus{
+    outline: none;
+}
+
+.submit {
+    background: #7E23FC;
+    color: white;
+    border: 1px solid gray;
+}
+
+.gifBox {
+    margin-bottom: 15px;
+}
+
+.theGif {
+    margin-bottom: 5px;
+    border-radius: 10px;
+    box-shadow: #055AE8;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
