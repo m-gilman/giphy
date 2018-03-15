@@ -70,7 +70,7 @@ $(document).ready(function () {
         // Storing the rating data
         var rating = results[i].rating;
         // Creates a div to hold each gif & rating... adds a class for bootstrap styling
-        var gifDiv = $("<div class='col-md-3'>");
+        var gifDiv = $("<div class='col-md-4'>");
         //append the gifDiv to gifsView (from the HTML)
         game.gifsView.append(gifDiv);
 
