@@ -5,7 +5,7 @@ $(document).ready(function () {
     gifsView: $("#gifsView")
   }
 
-  var topics = ["Pug", "French Bulldog", "Border Collie", "Boxer Dog", "Great Dane", "Bullmastiff", "German Shepherd", "Siberian Husky", "Chihuahua"];
+  var topics = ["Cute Dogs", "Pugs", "Corgi Puppies", "French Bulldogs", "Border Collies", "Boxer Dogs", "Great Danes", "Bullmastiffs", "German Shepherds", "Siberian Huskies", "Chihuahuas"];
 
   //My theory is that this could be set to anything because clicking the gifButton should override this info
   var search = ""
@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     // var apiKey = "csix2n2pZgMcRONDUumqudawwAPLmBwz";
     // Building the URL needed to query the database
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=csix2n2pZgMcRONDUumqudawwAPLmBwz&limit=10&rating=pg";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=csix2n2pZgMcRONDUumqudawwAPLmBwz&limit=10&rating=g";
 
     // Run the AJAX call to the Giphy API
     $.ajax({
