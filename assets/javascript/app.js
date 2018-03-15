@@ -7,10 +7,10 @@ $(document).ready(function () {
     gifsView: $("#gifsView")
   }
 
-  var topics = ["Pug", "Cavalier King Charles Spaniel", "French Bulldog", "Border Collie", "Boxer Dog", "Great Dane", "Bullmastiff", "German Shepherd", "Labrador", "Siberian Husky", "Yorkie", "Poodle", "Pug", "Chihuahua"];
+  var topics = ["Pug", "Cavalier King Charles Spaniel", "French Bulldog", "Border Collie", "Boxer Dog", "Great Dane", "Bullmastiff", "German Shepherd", "Siberian Husky", "Chihuahua"];
 
   //My theory is that this could be set to anything because clicking the gifButton should override this info
-  var search = "rainbow"
+  var search = ""
 
   // Function for displaying buttons
   function renderButtons() {
@@ -46,6 +46,7 @@ $(document).ready(function () {
   // Calling the renderButtons function to display the intial buttons
   renderButtons();
 
+  //When the gifButton is clicked
   $(document).on('click', '.gifButton', function () {
     //Empty so that the list of gifs is replaced and doesn't grow 
     $('#gifsView').empty();
@@ -84,7 +85,6 @@ $(document).ready(function () {
         var image = $("<img>");
         image.addClass("img-fluid theGif");
         image.attr("alt", "gif cannot be displayed");
-        image.attr("id", "playPause");
         image.attr("src", results[i].images.downsized_still.url);
         image.attr("data-animate", results[i].images.downsized.url);
         image.attr("data-still", results[i].images.downsized_still.url);
@@ -96,19 +96,23 @@ $(document).ready(function () {
       }
     });
 
-    //Play & Pause
-    $(document).on('click', '#playPause', function () {
+    //Play & Pause when a gif is clicked
+    game.gifsView.on('click', '.theGif', function () {
       var state = $(this).attr('data-state');
-      // console.log(state);
+      console.log(state);
 
       if (state === "still") {
         $(this).attr("src", $(this).data("animate"));
         $(this).attr("data-state", "animate");
-      } else {
+        state = $(this).attr('data-state');
+        console.log('state should be animate =' + state);
+      } else if (state === "animate") {
         $(this).attr("src", $(this).data("still"));
         $(this).attr("data-state", "still");
+        state = $(this).attr('data-state');
+        console.log('state should be still =' + state);
       }; //ends if statement
-    }); // ends playPause click function
+    }); // ends playPause click function 
   }); // ends button click function
 
 }); //ends the "document.ready" code
