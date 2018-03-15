@@ -1,7 +1,7 @@
 /* * {
     outline: 1px solid red !important;
-    } */
-
+    }
+ */
 
 /* Footer */
 .pagewrap {
@@ -55,7 +55,7 @@ h1 {
     font-family: 'Pacifico', cursive;
 }
 
-.preButton {
+.gifButton {
     background: #055AE8;
     color: white;
     padding: 3px 12px;
@@ -83,9 +83,10 @@ h1 {
 }
 
 .theGif {
+    max-width: 200px;
+    max-height: 250px;
     margin-bottom: 5px;
     border-radius: 10px;
-    box-shadow: #055AE8;
 }
 
 input[type=text] {
