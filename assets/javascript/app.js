@@ -1,5 +1,3 @@
-//Known bug: App works as expected when user clicks a button the first time, but after that, it only works after two clicks. ?? 
-
 $(document).ready(function () {
   // cache DOM SELECTORS....
   var game = {
@@ -7,7 +5,7 @@ $(document).ready(function () {
     gifsView: $("#gifsView")
   }
 
-  var topics = ["Pug", "Cavalier King Charles Spaniel", "French Bulldog", "Border Collie", "Boxer Dog", "Great Dane", "Bullmastiff", "German Shepherd", "Siberian Husky", "Chihuahua"];
+  var topics = ["Pug", "French Bulldog", "Border Collie", "Boxer Dog", "Great Dane", "Bullmastiff", "German Shepherd", "Siberian Husky", "Chihuahua"];
 
   //My theory is that this could be set to anything because clicking the gifButton should override this info
   var search = ""
@@ -85,34 +83,32 @@ $(document).ready(function () {
         var image = $("<img>");
         image.addClass("img-fluid theGif");
         image.attr("alt", "gif cannot be displayed");
-        image.attr("src", results[i].images.downsized_still.url);
-        image.attr("data-animate", results[i].images.downsized.url);
-        image.attr("data-still", results[i].images.downsized_still.url);
+        image.attr("src", results[i].images.original_still.url);
+        image.attr("data-animate", results[i].images.original.url);
+        image.attr("data-still", results[i].images.original_still.url);
         image.attr("data-state", "still");
-        
+
         // Display the gif
         gifDiv.append(image);
-        
       }
+      gifDiv.append(image);
+
     });
 
-    //Play & Pause when a gif is clicked
-    game.gifsView.on('click', '.theGif', function () {
-      var state = $(this).attr('data-state');
-      console.log(state);
 
-      if (state === "still") {
-        $(this).attr("src", $(this).data("animate"));
-        $(this).attr("data-state", "animate");
-        state = $(this).attr('data-state');
-        console.log('state should be animate =' + state);
-      } else if (state === "animate") {
-        $(this).attr("src", $(this).data("still"));
-        $(this).attr("data-state", "still");
-        state = $(this).attr('data-state');
-        console.log('state should be still =' + state);
-      }; //ends if statement
-    }); // ends playPause click function 
   }); // ends button click function
+  //Play & Pause when a gif is clicked
+  game.gifsView.on("click", ".theGif", function () {
+    var state = $(this).attr('data-state');
+    console.log(state);
 
+    if (state === "still") {
+      $(this).attr("data-state", "still");
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
+    } else {
+      $(this).attr("src", $(this).attr("data-still"));
+      $(this).attr("data-state", "still");
+    }; //ends if statement
+  }); // ends playPause click function 
 }); //ends the "document.ready" code
